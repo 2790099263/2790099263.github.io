@@ -154,20 +154,20 @@
 <p><strong>脉冲宽度为1ms时，舵机的输出轴将移至最小的位置（0度）；</strong></p>
 <p><strong>脉冲宽度为2ms时，舵机的输出轴将移至最小的位置（180度)；</strong></p>
 <p>因为：PWM周期为20ms = (72*20000)/72000000=0.02<br>所以：TIM_Period = 19999，TIM_Prescaler = 71,就是我的程序入口参数</p>
-<p><img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211026195934440.png" alt="image-20211026195934440"></p>
+<p><img src="https://raw.githubusercontent.com/2790099263/tuchuang/gh-pages/img/20211027200547.png" alt="image-20211026195934440"></p>
 </li>
 <li><p>目标距离的计算：</p>
 <p>当我们给脉冲触发引脚（trig）输入一个长为20us的高电平方波，输入方波后，模块会自动发射8个40KHz的声波，与此同时回波引脚（echo）端的电平会由0变为1；（此时应该启动定时器计时）当超声波返回被模块接收到时，回波引 脚端的电平会由1变为0；（此时应该停止定时器计数），定时器记下的这个时间即为超声波由发射到返回的总时长。根据声音在空气中的速度为344米/秒，即可计算出所测的距离。</p>
 <p>根据声学原理我们可以得出距离的计算公式：</p>
-<p><img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211026200318236.png" alt="image-20211026200318236"></p>
+<p><img src="https://raw.githubusercontent.com/2790099263/tuchuang/gh-pages/img/20211027200632.png" alt="image-20211026200318236"></p>
 <p>其中value2和value1分别是接收和发射的定时器时间，Value2-Value1就是时间差</p>
 <p>同时，为了使测量值更加准确，我才用了多次测量取平均值的方法减小误差</p>
-<p><img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211026200531458.png" alt="image-20211026200531458"></p>
+<p><img src="https://raw.githubusercontent.com/2790099263/tuchuang/gh-pages/img/20211027200654.png" alt="image-20211026200531458"></p>
 </li>
 <li><p>oled控制中，通过加减控制被点亮的像素点的位置，从而显示出相应的图像</p>
 </li>
 </ol>
-<h2 id="电路设计"><a href="#电路设计" class="headerlink" title="电路设计"></a>电路设计</h2><h3 id="系统总体框图"><a href="#系统总体框图" class="headerlink" title="系统总体框图"></a>系统总体框图</h3><p><img src="C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20211026200844235.png" alt="image-20211026200844235"></p>
+<h2 id="电路设计"><a href="#电路设计" class="headerlink" title="电路设计"></a>电路设计</h2><h3 id="系统总体框图"><a href="#系统总体框图" class="headerlink" title="系统总体框图"></a>系统总体框图</h3><p><img src="https://raw.githubusercontent.com/2790099263/tuchuang/gh-pages/img/20211027200715.png" alt="image-20211026200844235"></p>
 <p>通过单片机控制舵机转动带动超声波模块转动，超声波模块获取目标的波的信息之后发送给单片机，单片机处理接收时间和计算目标距离，最后控制屏幕和LED点阵完成信息的显示，就此完成一个工作循环</p>
 <h3 id="LED点阵矩阵电路原理图"><a href="#LED点阵矩阵电路原理图" class="headerlink" title="LED点阵矩阵电路原理图"></a>LED点阵矩阵电路原理图</h3><p><strong><del>下方正在施工中</del></strong></p>
  
