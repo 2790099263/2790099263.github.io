@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">325</span>
+            <span class="post-count">2.1k</span>
         </span>
     </span>
 
@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">8 min</span>
         </span>
     </span>
 </div>
@@ -122,6 +122,9 @@
 <p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ javac HelloWorld.java</span><br><span class="line">$ java HelloWorld </span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
 
+<p>如果遇到编码问题就可以在编译的时候加一个 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac -encoding UTF-8 HelloWorld.java </span><br><span class="line">java HelloWorld </span><br></pre></td></tr></table></figure>
+
 
 
 <h2 id="Tomcat环境安装"><a href="#Tomcat环境安装" class="headerlink" title="Tomcat环境安装"></a>Tomcat环境安装</h2><p>从tomcat官网下载合适的安装包</p>
@@ -136,7 +139,111 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ./bin/shutdown.sh</span><br></pre></td></tr></table></figure>
 
 <h2 id="MySQL环境搭建"><a href="#MySQL环境搭建" class="headerlink" title="MySQL环境搭建"></a>MySQL环境搭建</h2><p><del>暂时用不到</del>，<del>先留坑</del></p>
-<h2 id="Java基本语法"><a href="#Java基本语法" class="headerlink" title="Java基本语法"></a>Java基本语法</h2><p>未完待续</p>
+<h2 id="Java基本语法"><a href="#Java基本语法" class="headerlink" title="Java基本语法"></a>Java基本语法</h2><h3 id="java-基础说明"><a href="#java-基础说明" class="headerlink" title="java 基础说明"></a>java 基础说明</h3><p>java是大小写敏感的语言，Hello 和hello是不一样的在java语言下</p>
+<p>几个名词在后面介绍：</p>
+<p><strong>（命名时候遵循驼峰命名法）</strong></p>
+<ul>
+<li>大小写敏感</li>
+<li>类名</li>
+<li>方法名</li>
+<li>源文件名：.java</li>
+<li>主方法入口</li>
+</ul>
+<h3 id="java的标识符"><a href="#java的标识符" class="headerlink" title="java的标识符"></a>java的标识符</h3><p>java的标识符和c/c++的标识符差不多，具体的可以参考Java的标识符（标识符就是Java语法中存在的字符）</p>
+<h3 id="java变量"><a href="#java变量" class="headerlink" title="java变量"></a>java变量</h3><p>java的变量主要有：</p>
+<ul>
+<li>局部变量</li>
+<li>类变量（静态变量）</li>
+<li>成员变量（非静态变量）</li>
+</ul>
+<h3 id="java注释"><a href="#java注释" class="headerlink" title="java注释"></a>java注释</h3><p>Java的注释参考c/c++的注释方式</p>
+<h2 id="Java的对象和类"><a href="#Java的对象和类" class="headerlink" title="Java的对象和类"></a>Java的对象和类</h2><p>因为c++和Java都是面向对象编程的语言所以我们可以类比c++中的对象和类进行编程</p>
+<p><strong>class</strong>表示类，类可以理解为分类，我们定义一个分类可以定义其中的变量，当然类的下面可以有很多的物体（<strong>object</strong>）</p>
+<p><img src="https://raw.githubusercontent.com/2790099263/tuchuang/gh-pages/20210105-java-object-1.png" alt="img"></p>
+<p>（图片来自菜鸟教程）<del>我看着不错就给扒过来了</del></p>
+<p>比如下面的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">student</span></span>&#123;</span><br><span class="line">    <span class="comment">//class即为一个类，这个class就表示定义一个关于学生的类</span></span><br><span class="line">	String StudentName;</span><br><span class="line">	<span class="keyword">int</span> StudentAge;</span><br><span class="line">	<span class="keyword">int</span> Score;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">exam</span><span class="params">()</span></span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>每个类都有自己的构造方法，如果我们没有定义特定的构造方法，Java会使用默认的构造方法，一个类可以有多个构造方法，构造方法必须和类同名</p>
+<h2 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h2><p>Java有两大数据类型</p>
+<ul>
+<li>内置数据类型</li>
+<li>引用数据类型</li>
+</ul>
+<h3 id="内置数据类型"><a href="#内置数据类型" class="headerlink" title="内置数据类型"></a>内置数据类型</h3><ul>
+<li>byte  八位有符号 数据范围 -128~127 默认值为0</li>
+<li>short 十六位有符号，数据范围-32768~32767 默认0</li>
+<li>int 三十二位有符号 数据范围 -2^31 ~ 2^31-1</li>
+<li>long 六十四位有符号 数据范围 -2^63 ~ 2^63-1</li>
+<li>float double char 都参考c++</li>
+<li>boolean 类比c++中的bool</li>
+</ul>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><p>引用数据类型类似c++中的指针类型，引用类型指向一个对象，指向对象的变量就是引用变量</p>
+<p>对象·数组都是引用数据类型，虽有引用类型的默认值都是null</p>
+<p>一个引用变量可以用来引用任何与其兼容的类型</p>
+<p>e.g.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Site site = <span class="keyword">new</span> Site(<span class="string">&quot;Runoob&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>引用数据类型可以分为类（<strong>class</strong>）接口（<strong>interface</strong>）数组（<strong>array</strong>）</p>
+<p>具体实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">&quot;china&quot;</span>;</span><br><span class="line">String b =a; <span class="comment">// 则a、b都指向常量池的&quot;china&quot;。</span></span><br><span class="line">String a =  <span class="keyword">new</span> String(<span class="string">&quot;china&quot;</span>);</span><br><span class="line">String b =a; <span class="comment">//则a、b都指向堆中的&quot;china&quot;。</span></span><br><span class="line">String a =  <span class="keyword">new</span> String(<span class="string">&quot;china&quot;</span>);</span><br><span class="line">String b =a;</span><br><span class="line"></span><br><span class="line">a = a.substring(<span class="number">0</span>,<span class="number">1</span>); <span class="comment">//则b指向栈中的&quot;china&quot;，a指向新的对象&quot;c&quot;。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本数据类型和引用数据类型的比较"><a href="#基本数据类型和引用数据类型的比较" class="headerlink" title="基本数据类型和引用数据类型的比较"></a>基本数据类型和引用数据类型的比较</h3><p>基本数据类型在栈中进行分配，分配速度较快，变量名指向具体的数值，变量名声明之后Java会立即分配内存数据给他，并且类型之间的赋值是创建新的拷贝，==和！=是进行值的比较，基本数据类型建立和销毁比较快</p>
+<p>引用数据类型在堆中进行分配，堆的读写速度慢于栈，变量名指向存储数据对象的内存地址，即变量名指向hash值，声明时候不会分配内存，只是存储了一个内存地址，对象之间的赋值只是传递引用，==和！=是比较两个引用是否相同，需要自己实现equals（）函数，类对象需要调用JVM进行销毁。</p>
+<h2 id="Java常量"><a href="#Java常量" class="headerlink" title="Java常量"></a>Java常量</h2><p>Java中用<strong>final</strong>关键字来修饰常量，常量在程序运行时是不能修改的，比如下面的例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PAI = <span class="number">3.1415926</span></span><br></pre></td></tr></table></figure>
+
+<p>常量的命名通常使用大写字母</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><p>整型，常量，字符型数据可以进行混合运算，在运算中，不同类型的数据先转化为同一类型，然后进行运算。</p>
+<p>数据类型转换满足以下要求</p>
+<ul>
+<li>不能对Boolean类型进行类型转换</li>
+<li>不能把对象类型转换成不相干的对象</li>
+<li>在把容量大的类型转化为容量小的类型时候必须使用强制类型转换。</li>
+<li>转换过程中可能会出现溢出或者损失精度。</li>
+<li>浮点数转化为小数是通过舍弃小数得到的，而不是四舍五入</li>
+</ul>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>条件：转换的数据类型必须是兼容的。</p>
+<p>格式：（type）value其中 type是要转换后的数据类型</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bt=<span class="number">123</span>;</span><br><span class="line"><span class="keyword">byte</span> li = (<span class="keyword">byte</span>)bt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="隐含强制类型转换"><a href="#隐含强制类型转换" class="headerlink" title="隐含强制类型转换"></a>隐含强制类型转换</h3><ul>
+<li><ol>
+<li>整数的默认类型是 int。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>小数默认是 double 类型浮点型，在定义 float 类型时必须在数字后面跟上 F 或者 f。</li>
+</ol>
+</li>
+</ul>
+<h2 id="Java变量类型"><a href="#Java变量类型" class="headerlink" title="Java变量类型"></a>Java变量类型</h2><p>Java的变量声明和c++基本相同</p>
+<p>Java支持的变量类型有：</p>
+<ul>
+<li>类变量：独立于方法之外的变量用<strong>static</strong>修饰</li>
+<li>实例变量：独立于方法之外的变量，不过没有static修饰</li>
+<li>局部变量：类的方法中的变量</li>
+</ul>
+<p>比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> StudentCode=<span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java局部变量"><a href="#Java局部变量" class="headerlink" title="Java局部变量"></a>Java局部变量</h3><p>类比于c++中的局部变量的定义，注意局部变量有作用域限制，注意局部变量的初始化</p>
+<h3 id="Java实例变量"><a href="#Java实例变量" class="headerlink" title="Java实例变量"></a>Java实例变量</h3><ul>
+<li>实例变量声明在一个类中但是在方法，构造方法和语句块之外；</li>
+<li>当一个对象被实例化之后，每个变量的值就都跟着确定</li>
+<li>实例变量在对象创建的时候创建，在对象被销毁的时候被销毁</li>
+<li>实例变量的值应该至少被一个方法，构造方法或者语句块应用，是的外部能够通过这些方式获取实例变量信息；</li>
+<li>实例变量可以成名在使用前或者使用后</li>
+<li>访问修饰符可以修饰实例变量</li>
+<li>实例变量对于类中的方法，构造方法或者语句块是可见的，一般情况下应该把实例变量设为私有，通过使用访问修饰符可以使实例变量对子类可见</li>
+<li>实例变量具有默认值</li>
+<li>实例变量可以直接通过变量名访问。但在静态方法或者其他类中，就应该使用完全限定名<strong>ObejectReference.VariableName</strong></li>
+</ul>
+<p>代码（复制自菜鸟教程）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">   <span class="comment">// 这个实例变量对子类可见</span></span><br><span class="line">   <span class="keyword">public</span> String name;</span><br><span class="line">   <span class="comment">// 私有变量，仅在该类可见</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">   <span class="comment">//在构造器中对name赋值</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Employee</span> <span class="params">(String empName)</span></span>&#123;</span><br><span class="line">      name = empName;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">//设定salary的值</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">(<span class="keyword">double</span> empSal)</span></span>&#123;</span><br><span class="line">      salary = empSal;</span><br><span class="line">   &#125;  </span><br><span class="line">   <span class="comment">// 打印信息</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printEmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;名字 : &quot;</span> + name );</span><br><span class="line">      System.out.println(<span class="string">&quot;薪水 : &quot;</span> + salary);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">      Employee empOne = <span class="keyword">new</span> Employee(<span class="string">&quot;RUNOOB&quot;</span>);</span><br><span class="line">      empOne.setSalary(<span class="number">1000.0</span>);</span><br><span class="line">      empOne.printEmp();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>个人感觉和c++差不多……</p>
  
       <!-- reward -->
       
