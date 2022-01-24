@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.1k</span>
+            <span class="post-count">3.1k</span>
         </span>
     </span>
 
@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">11 min</span>
         </span>
     </span>
 </div>
@@ -244,6 +244,59 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">   <span class="comment">// 这个实例变量对子类可见</span></span><br><span class="line">   <span class="keyword">public</span> String name;</span><br><span class="line">   <span class="comment">// 私有变量，仅在该类可见</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">   <span class="comment">//在构造器中对name赋值</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Employee</span> <span class="params">(String empName)</span></span>&#123;</span><br><span class="line">      name = empName;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">//设定salary的值</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSalary</span><span class="params">(<span class="keyword">double</span> empSal)</span></span>&#123;</span><br><span class="line">      salary = empSal;</span><br><span class="line">   &#125;  </span><br><span class="line">   <span class="comment">// 打印信息</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printEmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;名字 : &quot;</span> + name );</span><br><span class="line">      System.out.println(<span class="string">&quot;薪水 : &quot;</span> + salary);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">      Employee empOne = <span class="keyword">new</span> Employee(<span class="string">&quot;RUNOOB&quot;</span>);</span><br><span class="line">      empOne.setSalary(<span class="number">1000.0</span>);</span><br><span class="line">      empOne.printEmp();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>个人感觉和c++差不多……</p>
+<h2 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h2><p>Java提供的修饰符主要有两类：</p>
+<ul>
+<li>访问修饰符</li>
+<li>非访问修饰符</li>
+</ul>
+<p>修饰符是用来定义类，方法或者变量，通常放在语句的最前端</p>
+<h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><p>……感觉可以理解为关键字</p>
+<p>Java中可以使用访问控制修饰符来保护对类，变量，方法和构造方法的访问。Java支持四种不同的访问权限。</p>
+<ul>
+<li>default（默认，什么也不写）：可以不使用任何修饰符，这个就是默认的修饰符</li>
+<li>private：在同一个类内可见。使用的对象：变量，方法，<strong>不能修饰类</strong>（外部类）</li>
+<li>public：对所有类都可见。使用对象：类，接口，变量，方法</li>
+<li>protected：对同一包内的类和所有子类可见，使用对象：变量，方法。（<strong>不能修饰类</strong>）</li>
+</ul>
+<h4 id="默认访问修饰符"><a href="#默认访问修饰符" class="headerlink" title="默认访问修饰符"></a>默认访问修饰符</h4><p>不使用任何关键字</p>
+<h4 id="私有访问修饰符-private"><a href="#私有访问修饰符-private" class="headerlink" title="私有访问修饰符-private"></a>私有访问修饰符-private</h4><p>声明变量私有，不能被外部类访问，private声明的方法，变量和构造方法只能被所属类访问，并且类和接口不能声明为private。声明为私有访问类型的变量只能通过类中公共的getter方法被外部类访问。private访问修饰符的使用主要用来隐藏类的实现细节和保护类中的数据。</p>
+<p>例如：(代码来自菜鸟教程)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Logger</span> </span>&#123;</span><br><span class="line">   <span class="keyword">private</span> String format;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getFormat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.format;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFormat</span><span class="params">(String format)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.format = format;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码中的format是私有变量，不能直接被外部操作，而setFormat函数为public，外界可以操作修改format的值，通过调用函数来get和set变量的值。</p>
+<h4 id="公有访问修饰符-public"><a href="#公有访问修饰符-public" class="headerlink" title="公有访问修饰符-public"></a>公有访问修饰符-public</h4><p>被声明的类，方法，构造方法和接口可以被其他任何类访问</p>
+<p>如果几个互相访问的public类分布在不同的包中，则需要导入相应的public类所在的包。</p>
+<p>由于类的继承性，类所有的公有方法和变量都能被其子类继承。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arguments)</span></span>&#123;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>java的main函数必须设置为共有的，否则Java的解释器无法运行该类</strong></p>
+<h4 id="受保护的访问修饰符-protected（-此坑待填-）"><a href="#受保护的访问修饰符-protected（-此坑待填-）" class="headerlink" title="受保护的访问修饰符-protected（**此坑待填**）"></a>受保护的访问修饰符-protected（**<u>此坑待填</u>**）</h4><p>protected：</p>
+<ul>
+<li><strong>子类和基类在同一包中</strong>：被声明为protect的变量，方法和构造器能被同一个包中的任何其他类访问。</li>
+<li><strong>子类和基类不在同一个包中</strong>：在子类中可以访问其从基类中继承的protected方法，而不能访问基类实例的protected方法</li>
+</ul>
+<h4 id="访问控制和继承"><a href="#访问控制和继承" class="headerlink" title="访问控制和继承"></a>访问控制和继承</h4><p>注意以下方法继承的规则：</p>
+<ul>
+<li>父类中声明为 public 的方法在子类中也必须为 public。</li>
+<li>父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public，不能声明为 private。</li>
+<li>父类中声明为 private 的方法，不能够被子类继承。</li>
+</ul>
+<h3 id="非访问修饰符"><a href="#非访问修饰符" class="headerlink" title="非访问修饰符"></a>非访问修饰符</h3><p>static修饰符，用来修饰方法和类变量</p>
+<p>final修饰符，用来修饰类，方法和变量，final修饰的类不能被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的</p>
+<p>abstract修饰符，用来创建抽象类和抽象方法。</p>
+<p>synchronized和volatile修饰符，主要用于线程的编程。</p>
+<h4 id="static修饰符"><a href="#static修饰符" class="headerlink" title="static修饰符"></a>static修饰符</h4><ul>
+<li>静态变量    用来声明独立于对象的静态变量</li>
+<li>静态方法    声明独立于对象的静态方法。静态方法不能使用类的非静态变量。</li>
+</ul>
+<h4 id="final修饰符"><a href="#final修饰符" class="headerlink" title="final修饰符"></a>final修饰符</h4><p>父类中的 final 方法可以被子类继承，但是不能被子类重写。</p>
+<p>声明 final 方法的主要目的是防止该方法的内容被修改。</p>
+<h4 id="abstract-修饰符"><a href="#abstract-修饰符" class="headerlink" title="abstract 修饰符"></a>abstract 修饰符</h4><p>留坑</p>
+<h4 id="synchronized-修饰符"><a href="#synchronized-修饰符" class="headerlink" title="synchronized 修饰符"></a>synchronized 修饰符</h4><p>留坑</p>
+<h4 id="transient-修饰符"><a href="#transient-修饰符" class="headerlink" title="transient 修饰符"></a>transient 修饰符</h4><p>留坑</p>
+<h4 id="volatile-修饰符"><a href="#volatile-修饰符" class="headerlink" title="volatile 修饰符"></a>volatile 修饰符</h4><p>留坑，用到再更</p>
+<h2 id="Java运算符"><a href="#Java运算符" class="headerlink" title="Java运算符"></a>Java运算符</h2><p>Java的运算符可以参考c++的运算符不能说相似，只能说一模一样</p>
  
       <!-- reward -->
       
