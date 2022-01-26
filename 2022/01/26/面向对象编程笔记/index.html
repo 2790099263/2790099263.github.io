@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>esp8266学习笔记 |  lsc的颓狗窝</title>
+      <title>面向对象编程笔记 |  lsc的颓狗窝</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-es8266学习笔记"
+  id="post-面向对象编程笔记"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  esp8266学习笔记
+  面向对象编程笔记
 </h1>
  
 
@@ -73,15 +73,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/01/24/es8266%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2022-01-24T06:44:30.000Z" itemprop="datePublished">2022-01-24</time>
+      <a href="/2022/01/26/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2022-01-26T13:23:00.000Z" itemprop="datePublished">2022-01-26</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">5</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">6 min</span>
         </span>
     </span>
 </div>
@@ -105,7 +105,41 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="esp8266学习笔记"><a href="#esp8266学习笔记" class="headerlink" title="esp8266学习笔记"></a>esp8266学习笔记</h1> 
+  <h1 id="面向对象编程笔记"><a href="#面向对象编程笔记" class="headerlink" title="面向对象编程笔记"></a>面向对象编程笔记</h1><h2 id="百度百科的解释"><a href="#百度百科的解释" class="headerlink" title="百度百科的解释"></a>百度百科的解释</h2><p><del>网上的文章有的真的很难懂</del></p>
+<p>面向对象编程（object oriented programming,OOP）</p>
+<p>OOP的一条基本原则是计算机程序由单个能够起到子程序作用的单元或对象组合而成。</p>
+<p>OOP达到了软件工程的三个主要目标：重用性、灵活性和扩展性。OOP=对象+类+继承+多态+消息，其中核心概念是类和对象。</p>
+<p><del>上面三句话来自百度</del>….<del>我反正挺蒙的</del></p>
+<p>有两个面向来编程，一个是面向过程编程，另一个是面向对象编程</p>
+<h2 id="面向过程编程（Procedure-Oriented-，PO）"><a href="#面向过程编程（Procedure-Oriented-，PO）" class="headerlink" title="面向过程编程（Procedure Oriented ，PO）"></a>面向过程编程（<strong>Procedure Oriented</strong> ，PO）</h2><p>面向过程就是把需要解决的问题抽象成一个过程，通过对数据和中间函数的描述来进行编程，需要解决的事情是什么，我们就用相应的函数或者方法来一步步的求解，等这些步骤执行完了，事情就解决了，也就结束了</p>
+<h2 id="面向对象编程（object-oriented-programming-OOP）"><a href="#面向对象编程（object-oriented-programming-OOP）" class="headerlink" title="面向对象编程（object oriented programming,OOP）"></a>面向对象编程（object oriented programming,OOP）</h2><p>面向对象编程是把需要解决的问题抽象成一个个对象，赋予对象一定的属性，并且定义这个对象的构造方法，定义解决问题的方法。通过对对象与对象的属性和方法的定义来解决一系列问题</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>在知乎上看见了一篇很容易明白的文章，感觉里面的例子能够帮助我们理解。链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/75265007">https://zhuanlan.zhihu.com/p/75265007</a></p>
+<h3 id="五子棋例子"><a href="#五子棋例子" class="headerlink" title="五子棋例子"></a>五子棋例子</h3><p><strong>面向过程</strong>的设计思路就是首先分析问题的步骤：</p>
+<p>1、开始游戏，2、黑子先走，3、绘制画面，4、判断输赢，5、轮到白子，6、绘制画面，7、判断输赢，8、返回步骤2，9、输出最后结果。把上面每个步骤用不同的方法来实现。</p>
+<p><strong>面向对象</strong>的设计则是从另外的思路来解决问题。</p>
+<p>整个五子棋可以分为1、黑白双方，这两方的行为是一模一样的，2、棋盘系统，负责绘制画面，3、规则系统，负责判定诸如犯规、输赢等。第一类对象（玩家对象）负责接受用户输入，并告知第二类对象（棋盘对象）棋子布局的变化，棋盘对象接收到了棋子的变化就要负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。</p>
+<p>可以明显地看出，面向对象是以功能来划分问题，而不是步骤。同样是绘制棋局，这样的行为在面向过程的设计中分散在了多个步骤中，很可能出现不同的绘制版本，因为通常设计人员会考虑到实际情况进行各种各样的简化。而面向对象的设计中，绘图只可能在棋盘对象中出现，从而保证了绘图的统一。</p>
+<h2 id="面向对象编程的特性"><a href="#面向对象编程的特性" class="headerlink" title="面向对象编程的特性"></a>面向对象编程的特性</h2><p>面向对象编程的基本特性：</p>
+<p>封装，多态，继承</p>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>就是把事务封装成类。封装可以把类中可以公开的属性和方法public，然后不能公开的吗，需要保护的数据进行保护，防止程序改变类中的私有数据。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承，指可以让某个类型的对象获得另一个类型的对象的属性的方法。它支持按级分类的概念。</p>
+<p>继承是指这样一种能力：它可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。 通过继承创建的新类称为“子类”或“派生类”，被继承的类称为“基类”、“父类”或“超类”。</p>
+<p>继承的过程，就是从一般到特殊的过程。要实现继承，可以通过 “继承”（Inheritance）和“组合”（Composition）来实现。继承概念的实现方式有二类：实现继承与接口继承。实现继承是指直接使用父类的属性和方法而无需额外编码的能力；接口继承是指仅使用属性和方法的名称、但是子类必须提供实现的能力。</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态，是指一个类实例的相同方法在不同情形有不同表现形式。</p>
+<p>多态机制使具有不同内部结构的对象可以共享相同的外部接口。这意味着，虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用。</p>
+<p><del>话说多态我不是很懂</del></p>
+<h2 id="五大基本原则：SPR-OCP-LSP-DIP-ISP"><a href="#五大基本原则：SPR-OCP-LSP-DIP-ISP" class="headerlink" title="五大基本原则：SPR, OCP, LSP, DIP, ISP"></a><strong>五大基本原则：SPR, OCP, LSP, DIP, ISP</strong></h2><p><strong>单一职责原则SRP(Single Responsibility Principle)</strong></p>
+<p>是指一个类的功能要单一，不能包罗万象。如同一个人一样，分配的工作不能太多，否则一天到晚虽然忙忙碌碌的，但效率却高不起来。</p>
+<p><strong>开放封闭原则OCP(Open－Close Principle)</strong></p>
+<p>一个模块在扩展性方面应该是开放的而在更改性方面应该是封闭的。比如：一个网络模块，原来只服务端功能，而现在要加入客户端功能，那么应当在不用修改服务端功能代码的前提下，就能够增加客户端功能的实现代码，这要求在设计之初，就应当将服务端和客户端分开，公共部分抽象出来。</p>
+<p><strong>里式替换原则LSP(the Liskov Substitution Principle LSP)</strong></p>
+<p>子类应当可以替换父类并出现在父类能够出现的任何地方。比如：公司搞年度晚会，所有员工可以参加抽奖，那么不管是老员工还是新员工，也不管是总部员工还是外派员工，都应当可以参加抽奖，否则这公司就不和谐了。</p>
+<p><strong>依赖倒置原则DIP(the Dependency Inversion Principle DIP)</strong></p>
+<p>具体依赖抽象，上层依赖下层。假设B是较A低的模块，但B需要使用到A的功能，这个时候，B不应当直接使用A中的具体类： 而应当由B定义一个抽象接口，并由A来实现这个抽象接口，B只使用这个抽象接口：这样就达到了依赖倒置的目的，B也解除了对A的依赖，反过来是A依赖于B定义的抽象接口。通过上层模块难以避免依赖下层模块，假如B也直接依赖A的实现，那么就可能造成循环依赖。一个常见的问题就是编译A模块时需要直接包含到B模块的cpp文件，而编译B时同样要直接包含到A的cpp文件。</p>
+<p><strong>接口分离原则ISP(the Interface Segregation Principle ISP)</strong></p>
+<p>模块间要通过抽象接口隔离开，而不是通过具体的类强耦合起来</p>
+<p><strong>本文参考文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/75265007">https://zhuanlan.zhihu.com/p/75265007</a></strong></p>
+ 
       <!-- reward -->
       
     </div>
@@ -169,30 +203,23 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://2790099263.github.io/2022/01/24/es8266%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://2790099263.github.io/2022/01/26/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2022/01/26/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            面向对象编程笔记
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/01/22/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+      <a href="/2022/01/24/es8266%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">java学习笔记</div>
+        <div class="article-nav-title">esp8266学习笔记</div>
       </a>
     
   </nav>
